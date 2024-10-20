@@ -23,15 +23,15 @@ public class OrderService {
     private WebClient.Builder webClientBuilder;
 
     public Order createOrder(OrderRequest orderRequest) {
-//        Boolean ispresent = inventoryClient.isInStock(orderRequest.getSkuCode());
+       Boolean ispresent = inventoryClient.isInStock(orderRequest.getSkuCode());
 
-        WebClient webClient = webClientBuilder.build();
-
-        Boolean ispresent = webClient.get()
-                .uri("http://localhost:9003/api/inventory", uriBuilder -> uriBuilder.queryParam("skuCode", orderRequest.getSkuCode()).build())
-                .retrieve()
-                .bodyToMono(Boolean.class)
-                .block();
+//        WebClient webClient = webClientBuilder.build();
+//
+//        Boolean ispresent = webClient.get()
+//                .uri("http://localhost:9003/api/inventory", uriBuilder -> uriBuilder.queryParam("skuCode", orderRequest.getSkuCode()).build())
+//                .retrieve()
+//                .bodyToMono(Boolean.class)
+//                .block();
 
         if (ispresent) {
             Order order = Order.builder()
