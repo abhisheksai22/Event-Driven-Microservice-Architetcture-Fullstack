@@ -30,4 +30,8 @@ public class OrderController {
         return new ResponseEntity<>(orderService.createOrder(orderRequest), HttpStatus.OK);
     }
 
+    @GetMapping("kafka")
+    public String testKafka(@RequestParam("email") String email){
+        return orderService.testKafka(email);
+    }
 }

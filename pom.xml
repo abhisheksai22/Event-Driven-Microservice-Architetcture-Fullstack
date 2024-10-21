@@ -15,9 +15,11 @@
     <name>spring-boot-3-microservices</name>
     <modules>
         <module>api-gateway</module>
+        <module>eureka-service</module>
         <module>product-service</module>
         <module>order-service</module>
         <module>inventory-service</module>
+        <module>notification-service</module>
     </modules>
 
     <properties>

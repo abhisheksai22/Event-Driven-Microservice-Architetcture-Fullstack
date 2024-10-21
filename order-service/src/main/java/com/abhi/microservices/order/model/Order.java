@@ -23,5 +23,9 @@ public class Order {
     private BigDecimal price;
     private Integer quantity;
     private String skuCode;
+    @ManyToOne
+    @JoinColumn(name= "user_id")
+    private UserDetails userDetails;
+
 
 }

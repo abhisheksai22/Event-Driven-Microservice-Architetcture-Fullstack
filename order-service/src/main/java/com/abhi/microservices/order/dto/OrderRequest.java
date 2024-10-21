@@ -1,5 +1,6 @@
 package com.abhi.microservices.order.dto;
 
+import com.abhi.microservices.order.model.UserDetails;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,7 +14,9 @@ import java.math.BigDecimal;
 @Builder
 public class OrderRequest {
 
+    private String email ;
     private BigDecimal price;
     private Integer quantity;
     private String skuCode;
+
 }
