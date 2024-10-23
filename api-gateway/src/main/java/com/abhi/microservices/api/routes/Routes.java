@@ -51,6 +51,8 @@ public class Routes {
         return GatewayRouterFunctions.route("order-service")
                 .route(RequestPredicates.path("api/order"),
                         HandlerFunctions.http("http://localhost:9002"))
+                .route(RequestPredicates.path("api/user"),
+                        HandlerFunctions.http("http://localhost:9002"))
                 .build();
     }
 

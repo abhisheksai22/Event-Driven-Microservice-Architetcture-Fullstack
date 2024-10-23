@@ -1,5 +1,6 @@
 package com.abhi.microservices.order.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,6 +17,7 @@ public class UserDetails {
     private Long userId;
     private String name;
     private String email;
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "userDetails")
     private List<Order> orderList;
 }

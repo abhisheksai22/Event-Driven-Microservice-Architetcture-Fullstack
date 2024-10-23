@@ -1,6 +1,6 @@
 package com.abhi.microservices.order.config;
 
-import com.abhi.microservices.order.feign.InventoryClient;
+import com.abhi.microservices.order.client.InventoryClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
